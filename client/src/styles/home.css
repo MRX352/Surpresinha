@@ -1,0 +1,416 @@
+/* 
+ * Warm Storytelling Design
+ * Paleta: Coral (#FF9E7D), Laranja (#F5A962), Amarelo (#FFD89B), Marrom (#6B4423)
+ * Tipografia: Merriweather (títulos), Open Sans (corpo)
+ * Animações: Suaves transições e fade-ins
+ */
+
+.love-declaration {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #FFFFFF;
+}
+
+/* ============ SEÇÃO DE INTRODUÇÃO ============ */
+.intro-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FFF5F0 0%, #FFF9F5 100%);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 158, 125, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.intro-section::after {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  left: -50%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(245, 169, 98, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+.intro-content {
+  text-align: center;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.intro-content h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 700;
+  color: #6B4423;
+  margin: 0 0 1rem 0;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.intro-subtitle {
+  font-size: 1.5rem;
+  color: #D4A5A0;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+
+/* ============ SEÇÕES DE FOTOS ============ */
+.photo-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.full-width-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  animation: zoomIn 0.8s ease-out;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ============ SEÇÕES DE TEXTO ============ */
+.text-section {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.text-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.text-content {
+  max-width: 700px;
+  z-index: 1;
+  position: relative;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.text-content h2 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Cores de fundo para cada seção de texto */
+.coral-bg {
+  background: linear-gradient(135deg, #FF9E7D 0%, #FFB8A0 100%);
+  color: #FFFFFF;
+}
+
+.coral-bg h2,
+.coral-bg p {
+  color: #FFFFFF;
+  text-shadow: 0 2px 4px rgba(107, 68, 35, 0.1);
+}
+
+.orange-bg {
+  background: linear-gradient(135deg, #F5A962 0%, #FFB87D 100%);
+  color: #FFFFFF;
+}
+
+.orange-bg h2,
+.orange-bg p {
+  color: #FFFFFF;
+  text-shadow: 0 2px 4px rgba(107, 68, 35, 0.1);
+}
+
+.yellow-bg {
+  background: linear-gradient(135deg, #FFD89B 0%, #FFDFB8 100%);
+  color: #6B4423;
+}
+
+.yellow-bg h2,
+.yellow-bg p {
+  color: #6B4423;
+}
+
+/* ============ SEÇÃO FINAL ============ */
+.final-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, #FFF5F0 0%, #FFFBF8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.final-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(212, 165, 160, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 10s ease-in-out infinite;
+}
+
+.shark-cat-container {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 3rem;
+  z-index: 1;
+  animation: fadeInScale 0.8s ease-out;
+}
+
+.shark-cat-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(107, 68, 35, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.shark-cat-image:hover {
+  transform: scale(1.02);
+}
+
+.final-message {
+  max-width: 700px;
+  text-align: center;
+  z-index: 1;
+  animation: slideInUp 0.8s ease-out 0.2s both;
+}
+
+.final-message h2 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 700;
+  color: #6B4423;
+  margin: 0 0 2rem 0;
+  line-height: 1.3;
+}
+
+.message-text {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2.5rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 165, 160, 0.2);
+  box-shadow: 0 10px 40px rgba(107, 68, 35, 0.08);
+}
+
+.message-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #6B4423;
+  margin: 0 0 1.5rem 0;
+  font-weight: 400;
+}
+
+.message-text p:last-child {
+  margin-bottom: 0;
+}
+
+.love-message {
+  font-size: 1.3rem !important;
+  font-weight: 700 !important;
+  color: #FF9E7D !important;
+  margin-top: 2rem !important;
+  font-style: italic;
+}
+
+/* ============ ANIMAÇÕES ============ */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============ RESPONSIVIDADE ============ */
+@media (max-width: 768px) {
+  .intro-section {
+    min-height: 80vh;
+    padding: 1.5rem;
+  }
+
+  .intro-content h1 {
+    font-size: 2rem;
+  }
+
+  .intro-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .photo-section {
+    height: 70vh;
+  }
+
+  .text-section {
+    min-height: 50vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .text-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+
+  .final-section {
+    min-height: auto;
+    padding: 3rem 1.5rem;
+  }
+
+  .shark-cat-container {
+    max-width: 300px;
+    margin-bottom: 2rem;
+  }
+
+  .message-text {
+    padding: 1.5rem;
+  }
+
+  .message-text p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-section {
+    min-height: 60vh;
+    padding: 1rem;
+  }
+
+  .intro-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .intro-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .photo-section {
+    height: 50vh;
+  }
+
+  .text-section {
+    min-height: 40vh;
+    padding: 2rem 1rem;
+  }
+
+  .text-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .text-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .shark-cat-container {
+    max-width: 250px;
+    margin-bottom: 1.5rem;
+  }
+
+  .message-text {
+    padding: 1rem;
+  }
+
+  .message-text p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .love-message {
+    font-size: 1.1rem !important;
+  }
+}
